@@ -1,28 +1,32 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
-  height: 40vmin;
+  width:80px;
+  height: 80px;
   pointer-events: none;
+  float: left;
+  padding: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  font-size: 20px;
+  font-family: "HelveticaLTWXX-Roman";
+  letter-spacing: -0.3px;
+  text-align: lef;
 }
+.head-txt{
+  padding-left: 75px;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -35,4 +39,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Styles go here */
+.stripe{
+  border-top: 4px solid #000000;
+  border-bottom: 4px solid #000000;
+  height: 20px;
+  background-image: repeating-linear-gradient(-45deg, rgb(0, 0, 0), rgb(0, 0, 0) 25px, rgb(202,155,247) 25px, rgb(202,155,247) 50px);
+  -webkit-animation:progress 2s linear infinite;
+  -moz-animation:progress 2s linear infinite;
+  -ms-animation:progress 2s linear infinite;
+  animation:progress 2s linear infinite;
+  background-size: 150% 100%;
+}
+
+@-webkit-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@-moz-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@-ms-keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -75px 0px;
+  }
+}
+@keyframes progress{
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -70px 0px;
+  }
+}
+
+ul.artists { list-style: none; margin: 0; padding-left: 10; padding-bottom:30px}
+ul.artists li { display: inline; }
+ul.artists li:after { content: ","; }
+ul.artists li:last-child:after { content: ""; }
+
+.songs {
+   border-bottom: 4px solid #000000;
+   border-top: 1px solid #000000;
+   background-color: rgba(202,155,247, 0.2);
+   text-transform: uppercase;
+}
+
+.sname {
+  font-size: 20px;
+  font-family: "HelveticaLTWXX-Roman";
+  text-transform: uppercase;
+  padding-bottom: 5px;
 }
